@@ -283,8 +283,6 @@
       }
 
       ul {
-  
-
          li {
             @include adaptiv-value('font-size', 24,18, 0);
             @include adaptiv-value('margin-bottom', 25,15, 0);
@@ -333,7 +331,7 @@
 
    h2 {
       margin: 0 auto;
-      margin-bottom: 70px;
+   @include adaptiv-value('margin-bottom', 70, 30, 0);
    }
 
    .swiper-container {
@@ -353,30 +351,33 @@
 
       &-active {
          background: linear-gradient(180deg, #7291CA 11.21%, #C456A2 53.77%, #ECCC54 97.23%), #81FEFA;
-
       }
    }
 
    // .amazon__row
 
    &__row {
-      margin-bottom: 75px;
+   @include adaptiv-value('margin-bottom', 75, 30, 0);
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 30px;
+   @include adaptiv-value('gap', 30, 15, 0);
+
+   @include breakpoint(768px){
+      grid-template-columns: 1fr;
+   }
    }
 
    // .amazon__column
 
    &__column {
       background: #fff;
-      padding-top: 30px;
-      padding-right: 30px;
-      padding-bottom: 30px;
-      padding-left: 30px;
-      border-radius: 50px;
+   @include adaptiv-value('padding-top', 30, 15, 0);
+   @include adaptiv-value('padding-right', 30, 15, 0);
+   @include adaptiv-value('padding-bottom', 30, 15, 0);
+   @include adaptiv-value('padding-left', 30, 15, 0);
+   @include adaptiv-value('border-radius', 50, 25, 0);
 
       &>p {
-         font-size: 16px;
+   @include adaptiv-value('font-size', 16, 14, 0);
          line-height: 130%;
          color: #A0A0A0;
       }
@@ -385,13 +386,20 @@
    // .amazon__column-top
 
    &__column-top {
-      margin-bottom: 17px;
+   @include adaptiv-value('margin-bottom', 17, 10, 0);
+
+   @include breakpoint(768px){
+     justify-content: center;
+   }
    }
 
    // .amazon__column-top-left
 
    &__column-top-left {
-      margin-right: 20px;
+   @include adaptiv-value('margin-right', 20, 10, 0);
+   flex-grow: 0;
+   flex-shrink: 0;
+   @include adaptiv-value('flex-basis', 95,60, 0);
    }
 
    // .amazon__column-top-right
@@ -409,21 +417,15 @@
       }
 
       h3 {
-         font-size: 24px;
+   @include adaptiv-value('font-size', 24, 20, 0);
       }
 
       h4 {
-         font-size: 18px;
+   @include adaptiv-value('font-size', 18, 16, 0);
          color: #A0A0A0;
       }
    }
 
-   .circles {
-      .circle {
-         margin-right: 10px;
-         cursor: pointer;
-      }
-   }
 }
 
 .success {

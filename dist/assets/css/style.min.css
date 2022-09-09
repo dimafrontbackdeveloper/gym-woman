@@ -616,7 +616,7 @@ body {
 
 .amazon h2 {
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: calc(30px + 40 * ((100vw - 320px) / 1600));
 }
 .amazon .swiper-container {
   overflow: hidden;
@@ -635,28 +635,41 @@ body {
   background: linear-gradient(180deg, #7291CA 11.21%, #C456A2 53.77%, #ECCC54 97.23%), #81FEFA;
 }
 .amazon__row {
-  margin-bottom: 75px;
+  margin-bottom: calc(30px + 45 * ((100vw - 320px) / 1600));
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 30px;
+  gap: calc(15px + 15 * ((100vw - 320px) / 1600));
+}
+@media screen and (max-width: 768px) {
+  .amazon__row {
+    grid-template-columns: 1fr;
+  }
 }
 .amazon__column {
   background: #fff;
-  padding-top: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  border-radius: 50px;
+  padding-top: calc(15px + 15 * ((100vw - 320px) / 1600));
+  padding-right: calc(15px + 15 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(15px + 15 * ((100vw - 320px) / 1600));
+  padding-left: calc(15px + 15 * ((100vw - 320px) / 1600));
+  border-radius: calc(25px + 25 * ((100vw - 320px) / 1600));
 }
 .amazon__column > p {
-  font-size: 16px;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
   line-height: 130%;
   color: #A0A0A0;
 }
 .amazon__column-top {
-  margin-bottom: 17px;
+  margin-bottom: calc(10px + 7 * ((100vw - 320px) / 1600));
+}
+@media screen and (max-width: 768px) {
+  .amazon__column-top {
+    justify-content: center;
+  }
 }
 .amazon__column-top-left {
-  margin-right: 20px;
+  margin-right: calc(10px + 10 * ((100vw - 320px) / 1600));
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(60px + 35 * ((100vw - 320px) / 1600));
 }
 .amazon__column-top-right h3,
 .amazon__column-top-right h4 {
@@ -667,15 +680,11 @@ body {
   text-transform: uppercase;
 }
 .amazon__column-top-right h3 {
-  font-size: 24px;
+  font-size: calc(20px + 4 * ((100vw - 320px) / 1600));
 }
 .amazon__column-top-right h4 {
-  font-size: 18px;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
   color: #A0A0A0;
-}
-.amazon .circles .circle {
-  margin-right: 10px;
-  cursor: pointer;
 }
 
 .success {
