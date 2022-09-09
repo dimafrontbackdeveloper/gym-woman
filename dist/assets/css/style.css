@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Inter&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 425px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        max-width: none;
+        margin: 0 auto;
+    }
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    overflow-x: hidden;
+    min-height: 100%;
+}
+
+.d-f {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.d-g {
+    display: grid;
+}
+
+.jc-sb {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.jc-c {
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.ai-c {
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.fd-c {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.fw-w {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+.ta-e {
+    text-align: end;
+}
+
+.gtc-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+    .gtc-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gtc-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+    .gtc-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gtc-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+    .gtc-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .gtc-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.title {
+    font-family: "Comic Neue";
+    font-style: italic;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-family: "Comic Neue";
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    max-width: 451px;
+    width: 100%;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    background: #fff0f0;
+    border: 2px solid #b18597;
+    border-radius: 50px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.button::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f9c4d2;
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+    -webkit-transform: translate3d(0, 0.75em, -1em);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.button:hover {
+    background: #ffe9e9;
+    -webkit-transform: translate(0, 0.25em);
+    transform: translate(0, 0.25em);
+}
+
+.button:hover::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+    -webkit-transform: translate3d(0, 0.5em, -1em);
+    transform: translate3d(0, 0.5em, -1em);
+}
+
+.button:active {
+    background: #ffe9e9;
+    -webkit-transform: translate(0em, 0.75em);
+    transform: translate(0em, 0.75em);
+}
+
+.button:active::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    -webkit-transform: translate3d(0, 0, -1em);
+    transform: translate3d(0, 0, -1em);
+}
+
+.section {
+    padding-top: 100px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: linear-gradient(180deg, #7291CA 11.21%, #C456A2 53.77%, #ECCC54 97.23%), #81FEFA;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.mlauto {
+    margin-left: auto;
+}
+
+.mauto {
+    margin: 0 auto;
+}
+
+.mrauto {
+    margin-right: auto;
+}
+
+.intro {
+    background-image: url("./../images/intro-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 180px;
+}
+
+.intro__column:first-child {
+    padding-top: 135px;
+    max-width: 550px;
+    margin-right: 30px;
+}
+
+.intro__column:first-child h1 {
+    font-family: "Comic Neue";
+    font-style: italic;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 75px;
+}
+
+.intro__column:last-child {
+    position: relative;
+}
+
+.intro__column-img1 {
+    -webkit-transform: translate(100px, -70px);
+    transform: translate(100px, -70px);
+}
+
+.intro__column-img2 {
+    position: absolute;
+    width: 300px;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.why h2 {
+    margin-bottom: 95px;
+}
+
+.why__content {
+    position: relative;
+}
+
+.why__describe {
+    position: absolute;
+}
+
+.why__describe p {
+    font-size: 18px;
+    line-height: 100%;
+    max-width: 190px;
+    margin-bottom: 16px;
+}
+
+.why__describe .circle {
+    position: absolute;
+    bottom: 0;
+}
+
+.why__describe1 {
+    top: 80px;
+}
+
+.why__describe2 {
+    top: 70px;
+}
+
+.why__describe3 {
+    top: 280px;
+}
+
+.why__describe4 {
+    bottom: 150px;
+}
+
+.why__describe5 {
+    bottom: 130px;
+}
