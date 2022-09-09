@@ -235,12 +235,33 @@
       margin-bottom: 70px;
    }
 
+   .swiper-container{
+      overflow: hidden;
+   }
+
+   .swiper-pagination{
+      position: static;
+   }
+
+   .swiper-pagination-bullet{
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background: #fff;
+      opacity: 1;
+   
+      &-active{
+      background: linear-gradient(180deg, #7291CA 11.21%, #C456A2 53.77%, #ECCC54 97.23%), #81FEFA;
+
+      }
+   }
+
    // .amazon__row
 
    &__row {
+      margin-bottom: 75px;
       grid-template-columns: repeat(2,1fr);
       column-gap: 30px;
-      margin-bottom: 75px;
    }
 
    // .amazon__column

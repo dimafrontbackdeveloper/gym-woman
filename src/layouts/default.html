@@ -3,6 +3,7 @@
 
 <head>
     {{> head }}
+
 </head>
 
 <body>
@@ -11,6 +12,17 @@
         <main class="content">{{> body }}</main>
         {{> footer }}
     </div>
+
+    <!-- smooth show blocks  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            disable: 'phone', // accepts following values: 'phone', 'tablet',
+            once: true,
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> <!-- slider -->
 
     <script src="assets/js/app.js"></script>
 </body>
