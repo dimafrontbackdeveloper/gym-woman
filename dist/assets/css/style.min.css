@@ -374,7 +374,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: calc(30px + 30 * ((100vw - 320px) / 1600));
-  padding-bottom: calc(90px + 90 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(70px + 110 * ((100vw - 320px) / 1600));
 }
 .intro .logo {
   width: calc(80px + 90 * ((100vw - 320px) / 1600));

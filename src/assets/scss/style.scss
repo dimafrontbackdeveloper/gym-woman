@@ -27,7 +27,7 @@
    background-repeat: no-repeat;
    background-size: cover;
    @include adaptiv-value('padding-top', 60, 30, 0);
-   @include adaptiv-value('padding-bottom', 180, 90, 0);
+   @include adaptiv-value('padding-bottom', 180, 70, 0);
 
    .logo {
       @include adaptiv-value('width', 170, 80, 0);
