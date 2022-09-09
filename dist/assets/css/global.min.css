@@ -78,7 +78,7 @@ body {
   font-family: "Comic Neue";
   font-style: italic;
   font-weight: 700;
-  font-size: 60px;
+  font-size: calc(36px + 24 * ((100vw - 320px) / 1600));
   line-height: 100%;
   text-transform: uppercase;
   text-align: center;
@@ -161,12 +161,12 @@ body {
 }
 
 .section {
-  padding-top: 100px;
+  padding-top: calc(50px + 50 * ((100vw - 320px) / 1600));
 }
 
 .circle {
-  width: 20px;
-  height: 20px;
+  width: calc(15px + 5 * ((100vw - 320px) / 1600));
+  height: calc(15px + 5 * ((100vw - 320px) / 1600));
   border-radius: 100%;
   background: #fff;
 }

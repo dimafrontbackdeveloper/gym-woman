@@ -253,7 +253,7 @@ body {
   font-family: "Comic Neue";
   font-style: italic;
   font-weight: 700;
-  font-size: 60px;
+  font-size: calc(36px + 24 * ((100vw - 320px) / 1600));
   line-height: 100%;
   text-transform: uppercase;
   text-align: center;
@@ -336,12 +336,12 @@ body {
 }
 
 .section {
-  padding-top: 100px;
+  padding-top: calc(50px + 50 * ((100vw - 320px) / 1600));
 }
 
 .circle {
-  width: 20px;
-  height: 20px;
+  width: calc(15px + 5 * ((100vw - 320px) / 1600));
+  height: calc(15px + 5 * ((100vw - 320px) / 1600));
   border-radius: 100%;
   background: #fff;
 }
@@ -437,23 +437,72 @@ body {
 
 .why h2 {
   margin: 0 auto;
-  margin-bottom: 95px;
+  margin-bottom: calc(45px + 50 * ((100vw - 320px) / 1600));
 }
 .why__content {
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .why__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .why__content {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .why__img {
+    display: none;
+  }
+}
 .why__describe {
   position: absolute;
 }
+@media screen and (max-width: 768px) {
+  .why__describe {
+    position: relative;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+  }
+}
 .why__describe p {
-  font-size: 18px;
+  font-size: calc(22px + -4 * ((100vw - 320px) / 1600));
   line-height: 100%;
   max-width: 190px;
-  margin-bottom: 16px;
+  margin-bottom: calc(8px + 8 * ((100vw - 320px) / 1600));
+}
+@media screen and (max-width: 1024px) {
+  .why__describe p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  .why__describe p {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .why__describe img {
+    display: none;
+  }
 }
 .why__describe .circle {
   position: absolute;
   bottom: 0;
+}
+@media screen and (max-width: 1024px) {
+  .why__describe .circle {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+  }
 }
 .why__describe1 {
   top: 80px;
@@ -463,6 +512,11 @@ body {
 }
 .why__describe3 {
   top: 280px;
+}
+@media screen and (max-width: 1024px) {
+  .why__describe3 {
+    top: 250px;
+  }
 }
 .why__describe4 {
   bottom: 150px;
@@ -575,7 +629,8 @@ body {
 .amazon__column-top-left {
   margin-right: 20px;
 }
-.amazon__column-top-right h3, .amazon__column-top-right h4 {
+.amazon__column-top-right h3,
+.amazon__column-top-right h4 {
   font-family: "Comic Neue";
   font-style: italic;
   font-weight: 700;

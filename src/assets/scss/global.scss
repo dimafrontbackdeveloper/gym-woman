@@ -80,7 +80,7 @@ body{
    font-family: 'Comic Neue';
    font-style: italic;
    font-weight: 700;
-   font-size: 60px;
+   @include adaptiv-value('font-size',60,36,0);
    line-height: 100%;
    text-transform: uppercase;
    text-align: center;
@@ -161,12 +161,12 @@ body{
 }
 
 .section{
-   padding-top: 100px;
+   @include adaptiv-value('padding-top',100,50,0);
 }
 
 .circle{
-   width: 20px;
-   height: 20px;
+   @include adaptiv-value('width',20,15,0);
+   @include adaptiv-value('height',20,15,0);
    border-radius: 100%;
    background: #fff;
 
