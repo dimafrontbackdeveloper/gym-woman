@@ -482,10 +482,26 @@ body {
   margin: 0 auto;
   margin-bottom: 70px;
 }
+.amazon .swiper-container {
+  overflow: hidden;
+}
+.amazon .swiper-pagination {
+  position: static;
+}
+.amazon .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #fff;
+  opacity: 1;
+}
+.amazon .swiper-pagination-bullet-active {
+  background: linear-gradient(180deg, #7291CA 11.21%, #C456A2 53.77%, #ECCC54 97.23%), #81FEFA;
+}
 .amazon__row {
+  margin-bottom: 75px;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 30px;
-  margin-bottom: 75px;
 }
 .amazon__column {
   background: #fff;
