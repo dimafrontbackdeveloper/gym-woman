@@ -492,22 +492,25 @@
 }
 
 .media {
-   padding-bottom: 100px;
+   @include adaptiv-value('padding-bottom', 100, 50, 0);
 
    h2 {
       margin: 0 auto;
-      margin-bottom: 85px;
+   @include adaptiv-value('margin-bottom', 85, 40, 0);
    }
 
    // .media__row
 
    &__row {
-      grid-template: 30px;
+   @include adaptiv-value('gap', 30, 15, 0);
+
    }
 
    // .media__column
 
-   &__column {}
+   &__column {
+      text-align: center;
+   }
 }
 
 .footer {
@@ -535,7 +538,6 @@
          text-transform: uppercase;
          color: #fff;
          @include adaptiv-value('margin-bottom', 75, 35, 0);
-         margin-bottom: 75px;
 
          @include breakpoint(1024px) {
             text-align: center;

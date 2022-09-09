@@ -733,15 +733,19 @@ body {
 }
 
 .media {
-  padding-bottom: 100px;
+  padding-bottom: calc(50px + 50 * ((100vw - 320px) / 1600));
 }
 .media h2 {
   margin: 0 auto;
-  margin-bottom: 85px;
+  margin-bottom: calc(40px + 45 * ((100vw - 320px) / 1600));
 }
 .media__row {
-  grid-template: 30px;
+  gap: calc(15px + 15 * ((100vw - 320px) / 1600));
 }
+.media__column {
+  text-align: center;
+}
+
 .footer {
   background-image: url("./../images/footer.jpg");
   padding-top: calc(40px + 40 * ((100vw - 320px) / 1600));
@@ -761,7 +765,6 @@ body {
   text-transform: uppercase;
   color: #fff;
   margin-bottom: calc(35px + 40 * ((100vw - 320px) / 1600));
-  margin-bottom: 75px;
 }
 @media screen and (max-width: 1024px) {
   .footer__column h2 {
