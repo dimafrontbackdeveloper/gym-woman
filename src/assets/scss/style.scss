@@ -12,6 +12,9 @@
 // контент
 @import './content.scss';
 
+// оболочка
+@import './wrapper.scss';
+
 // шрифты
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Inter&display=swap');
 
@@ -33,6 +36,9 @@
    // .intro__row
 
    &__row {
+      @include breakpoint(1024px){
+         justify-content: center;
+      }
    }
 
    // .intro__column
@@ -42,6 +48,12 @@
          @include adaptiv-value('padding-top',135,30,0);
          max-width: 550px;
          margin-right: 30px;
+
+         @include breakpoint(1024px){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
 
          @include breakpoint(768px){
             margin-right: 0px;
@@ -57,7 +69,7 @@
          color:#fff;
          @include adaptiv-value('margin-bottom',75,35,0);
 
-         @include breakpoint(768px){
+         @include breakpoint(1024px){
             text-align: center;
          }
          }
@@ -71,7 +83,7 @@
    // .intro__column-img
 
    &__column-img {
-      @include breakpoint(768px){
+      @include breakpoint(1024px){
          display: none;
       }
    }
@@ -386,26 +398,46 @@ color: #A0A0A0;
 
 .footer {
    background-image: url('./../images/footer.jpg');
-   padding-top: 80px;
-   padding-bottom: 80px;
+   @include adaptiv-value('padding-top',80,40,0);
+   @include adaptiv-value('padding-bottom',80,40,0);
 
    // .footer__row
 
    &__row {
+      @include breakpoint(1024px){
+         grid-template-columns: 1fr;
+      }
    }
 
    // .footer__column
 
    &__column {
       h2{
-         font-family: 'Comic Neue';
-font-style: italic;
-font-weight: 700;
-font-size: 72px;
-line-height: 100%;
-text-transform: uppercase;
-margin-bottom: 75px;
-color:#fff;
+      font-family: 'Comic Neue';
+      font-style: italic;
+      font-weight: 700;
+      @include adaptiv-value('font-size',72,36,0);
+      line-height: 100%;
+      text-transform: uppercase;
+      color:#fff;
+      @include adaptiv-value('margin-bottom',75,35,0);
+      margin-bottom: 75px;
+
+      @include breakpoint(1024px){
+         text-align: center;
+      }
+      }
+
+      img{
+         @include breakpoint(1024px){
+            display: none;
+         }
+      }
+
+      @include breakpoint(1024px){
+         display: flex;
+         flex-direction: column;
+         align-items: center;
       }
    }
 }
