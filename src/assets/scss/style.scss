@@ -110,7 +110,6 @@
    h2 {
       margin: 0 auto;
       @include adaptiv-value('margin-bottom', 95, 45, 0);
-
    }
 
    // .why__content
@@ -230,10 +229,14 @@
 }
 
 .how {
-   margin-top: 86px;
-   padding-top: 60px;
-   padding-bottom: 60px;
+   @include adaptiv-value('margin-top', 86, 45, 0);
+   @include adaptiv-value('padding-top', 60, 30, 0);
+   @include adaptiv-value('padding-bottom', 60, 30, 0);
    position: relative;
+
+   @include breakpoint(1440px){
+      background: $primary;
+   }
 
    .bg {
       position: absolute;
@@ -242,6 +245,10 @@
       width: 50vw;
       height: 100%;
       background: $primary;
+
+      @include breakpoint(1440px){
+         display: none;
+      }
    }
 
    // .how__container
@@ -256,25 +263,35 @@
 
    &__content {
       position: relative;
-      padding-top: 70px;
-      padding-right: 150px;
-      padding-bottom: 95px;
-      padding-left: 150px;
+   @include adaptiv-value('padding-top', 70, 35, 0);
+   @include adaptiv-value('padding-right', 150, 40, 0);
+   @include adaptiv-value('padding-bottom', 95, 45, 0);
+   @include adaptiv-value('padding-left', 150,40, 0);
       background: #FFFFFF;
       opacity: 0.95;
       border-radius: 50px;
 
       h2 {
          text-align: start;
-         margin-bottom: 60px;
+         @include adaptiv-value('margin-bottom', 60,30, 0);
+
+         @include breakpoint(1440px){
+            text-align: center;
+            margin: 0 auto;
+            @include adaptiv-value('margin-bottom', 60,30, 0);
+         }
       }
 
       ul {
-         li {
-            font-size: 24px;
-            line-height: 130%;
-            margin-bottom: 25px;
+  
 
+         li {
+            @include adaptiv-value('font-size', 24,18, 0);
+            @include adaptiv-value('margin-bottom', 25,15, 0);
+
+            @include breakpoint(768px){
+               align-items: start;
+            }
 
             &:last-child {
                margin-bottom: 0px;
@@ -283,9 +300,12 @@
             &::before {
                content: '';
                display: block;
-               margin-right: 50px;
-               width: 45px;
-               height: 45px;
+            @include adaptiv-value('margin-right', 50,15, 0);
+            flex-grow: 0;
+            flex-shrink: 0;
+            @include adaptiv-value('flex-basis', 45,20, 0);
+            @include adaptiv-value('width', 45,20, 0);
+            @include adaptiv-value('height', 45,20, 0);
                background-image: url('./../images/check-mark.png');
                background-repeat: no-repeat;
                background-size: cover;
@@ -301,6 +321,10 @@
          position: absolute;
          top: -200px;
          right: 70px;
+
+         @include breakpoint(1440px){
+            display: none;
+         }
       }
    }
 }
