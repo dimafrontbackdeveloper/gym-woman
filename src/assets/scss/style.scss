@@ -23,13 +23,11 @@
    background-image: url('./../images/intro-bg.jpg');
    background-repeat: no-repeat;
    background-size: cover;
-   padding-top: 60px;
-   padding-bottom: 180px;
-
-
+   @include adaptiv-value('padding-top',60,30,0);
+   @include adaptiv-value('padding-bottom',180,90,0);
 
    .logo{
-
+      @include adaptiv-value('width',170,80,0);
    }
 
    // .intro__row
@@ -41,19 +39,27 @@
 
    &__column {
       &:first-child{
-         padding-top: 135px;
+         @include adaptiv-value('padding-top',135,30,0);
          max-width: 550px;
          margin-right: 30px;
+
+         @include breakpoint(768px){
+            margin-right: 0px;
+         }
 
          h1{
             font-family: 'Comic Neue';
          font-style: italic;
          font-weight: 700;
-         font-size: 72px;
+         @include adaptiv-value('font-size',72,36,0);
          line-height: 100%;
          text-transform: uppercase;
          color:#fff;
-         margin-bottom: 75px;
+         @include adaptiv-value('margin-bottom',75,35,0);
+
+         @include breakpoint(768px){
+            text-align: center;
+         }
          }
       }
 
@@ -65,6 +71,9 @@
    // .intro__column-img
 
    &__column-img {
+      @include breakpoint(768px){
+         display: none;
+      }
    }
 
    // .intro__column-img1
