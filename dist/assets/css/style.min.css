@@ -282,7 +282,7 @@ body {
   width: 100%;
   padding-top: calc(14px + 14 * ((100vw - 320px) / 1600));
   padding-bottom: calc(14px + 14 * ((100vw - 320px) / 1600));
-  background: #81FEFA;
+  background: #81fefa;
   border: none;
   border-radius: calc(25px + 25 * ((100vw - 320px) / 1600));
   transform-style: preserve-3d;
@@ -379,6 +379,9 @@ body {
 .intro .logo {
   width: calc(80px + 90 * ((100vw - 320px) / 1600));
 }
+.intro__row {
+  align-items: end;
+}
 @media screen and (max-width: 1024px) {
   .intro__row {
     justify-content: center;
@@ -418,21 +421,24 @@ body {
 }
 .intro__column:last-child {
   position: relative;
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .intro__column:last-child {
+    width: 0px;
+  }
+}
+.intro__column-img {
+  position: absolute;
+  width: 300px;
+  bottom: -60px;
+  left: 80px;
+  z-index: 2;
 }
 @media screen and (max-width: 1024px) {
   .intro__column-img {
     display: none;
   }
-}
-.intro__column-img1 {
-  transform: translate(140px, -70px);
-}
-.intro__column-img2 {
-  position: absolute;
-  width: 300px;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
 }
 
 .why h2 {
@@ -533,7 +539,7 @@ body {
 }
 @media screen and (max-width: 1440px) {
   .how {
-    background: #000;
+    background: #C456A2;
   }
 }
 .how .bg {
@@ -542,7 +548,8 @@ body {
   left: 0;
   width: 50vw;
   height: 100%;
-  background: #000;
+  background: #C456A2;
+  border-radius: 0px 50px 50px 0px;
 }
 @media screen and (max-width: 1440px) {
   .how .bg {
@@ -575,41 +582,21 @@ body {
     margin-bottom: calc(30px + 30 * ((100vw - 320px) / 1600));
   }
 }
-.how__content ul li {
-  font-size: calc(18px + 6 * ((100vw - 320px) / 1600));
-  margin-bottom: calc(15px + 10 * ((100vw - 320px) / 1600));
+.how__content p {
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(30px + 30 * ((100vw - 320px) / 1600));
+  max-width: 540px;
 }
-@media screen and (max-width: 768px) {
-  .how__content ul li {
-    align-items: start;
-  }
-}
-.how__content ul li:last-child {
+.how__content p:last-of-type {
   margin-bottom: 0px;
 }
-.how__content ul li::before {
-  content: "";
-  display: block;
-  margin-right: calc(15px + 35 * ((100vw - 320px) / 1600));
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: calc(20px + 25 * ((100vw - 320px) / 1600));
-  width: calc(20px + 25 * ((100vw - 320px) / 1600));
-  height: calc(20px + 25 * ((100vw - 320px) / 1600));
-  background-image: url("./../images/check-mark.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.how__content ul li span {
-  display: inline-block;
-}
-.how__content .man {
+.how__content .girl {
   position: absolute;
-  top: -200px;
+  top: -255px;
   right: 70px;
 }
 @media screen and (max-width: 1440px) {
-  .how__content .man {
+  .how__content .girl {
     display: none;
   }
 }
@@ -690,7 +677,7 @@ body {
 .success {
   margin-top: calc(50px + 50 * ((100vw - 320px) / 1600));
   padding-bottom: calc(50px + 50 * ((100vw - 320px) / 1600));
-  background: #000;
+  background: #C456A2;
 }
 .success h2 {
   margin: 0 auto;
@@ -740,20 +727,30 @@ body {
   margin-bottom: calc(40px + 45 * ((100vw - 320px) / 1600));
 }
 .media__row {
-  gap: calc(15px + 15 * ((100vw - 320px) / 1600));
+  gap: calc(20px + 10 * ((100vw - 320px) / 1600));
 }
 .media__column {
   text-align: center;
 }
 
 .footer {
-  background-image: url("./../images/footer.jpg");
-  padding-top: calc(40px + 40 * ((100vw - 320px) / 1600));
-  padding-bottom: calc(40px + 40 * ((100vw - 320px) / 1600));
+  background-image: url("./../images/intro-bg.jpg");
+  padding-top: calc(50px + 80 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(50px + 80 * ((100vw - 320px) / 1600));
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media screen and (max-width: 1024px) {
-  .footer__row {
-    grid-template-columns: 1fr;
+  .footer {
+    background: #FFA5D7;
+  }
+}
+.footer__column {
+  max-width: 550px;
+}
+@media screen and (max-width: 1024px) {
+  .footer__column {
+    margin: 0 auto;
   }
 }
 .footer__column h2 {
@@ -763,7 +760,6 @@ body {
   font-size: calc(36px + 36 * ((100vw - 320px) / 1600));
   line-height: 100%;
   text-transform: uppercase;
-  color: #fff;
   margin-bottom: calc(35px + 40 * ((100vw - 320px) / 1600));
 }
 @media screen and (max-width: 1024px) {

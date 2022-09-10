@@ -107,7 +107,7 @@ body {
   width: 100%;
   padding-top: calc(14px + 14 * ((100vw - 320px) / 1600));
   padding-bottom: calc(14px + 14 * ((100vw - 320px) / 1600));
-  background: #81FEFA;
+  background: #81fefa;
   border: none;
   border-radius: calc(25px + 25 * ((100vw - 320px) / 1600));
   transform-style: preserve-3d;

@@ -29,6 +29,8 @@
    @include adaptiv-value('padding-top', 60, 30, 0);
    @include adaptiv-value('padding-bottom', 180, 70, 0);
 
+
+
    .logo {
       @include adaptiv-value('width', 170, 80, 0);
    }
@@ -36,6 +38,8 @@
    // .intro__row
 
    &__row {
+      align-items: end;
+
       @include breakpoint(1024px) {
          justify-content: center;
       }
@@ -77,33 +81,29 @@
 
       &:last-child {
          position: relative;
+         width: 100%;
+
+         @include breakpoint(1024px) {
+            width: 0px;
+         }
       }
    }
 
    // .intro__column-img
 
    &__column-img {
+      position: absolute;
+      width: 300px;
+      bottom: -60px;
+      left: 80px;
+      z-index: 2;
+      // transform: translate(-50px,-50px) !important;
+
       @include breakpoint(1024px) {
          display: none;
       }
    }
 
-   // .intro__column-img1
-
-   &__column-img1 {
-      transform: translate(140px, -70px);
-   }
-
-
-   // .intro__column-img2
-
-   &__column-img2 {
-      position: absolute;
-      width: 300px;
-      bottom: 0;
-      left: 0;
-      z-index: 2;
-   }
 }
 
 .why {
@@ -245,6 +245,7 @@
       width: 50vw;
       height: 100%;
       background: $primary;
+      border-radius: 0px 50px 50px 0px;
 
       @include breakpoint(1440px){
          display: none;
@@ -282,42 +283,23 @@
          }
       }
 
-      ul {
-         li {
-            @include adaptiv-value('font-size', 24,18, 0);
-            @include adaptiv-value('margin-bottom', 25,15, 0);
+   
+         p {
+            @include adaptiv-value('font-size', 18,16, 0);
+            @include adaptiv-value('margin-bottom', 60,30, 0);
+            max-width: 540px;
 
-            @include breakpoint(768px){
-               align-items: start;
-            }
 
-            &:last-child {
+            &:last-of-type {
                margin-bottom: 0px;
             }
 
-            &::before {
-               content: '';
-               display: block;
-            @include adaptiv-value('margin-right', 50,15, 0);
-            flex-grow: 0;
-            flex-shrink: 0;
-            @include adaptiv-value('flex-basis', 45,20, 0);
-            @include adaptiv-value('width', 45,20, 0);
-            @include adaptiv-value('height', 45,20, 0);
-               background-image: url('./../images/check-mark.png');
-               background-repeat: no-repeat;
-               background-size: cover;
-            }
-
-            span {
-               display: inline-block;
-            }
          }
-      }
+      
 
-      .man {
+      .girl {
          position: absolute;
-         top: -200px;
+         top: -255px;
          right: 70px;
 
          @include breakpoint(1440px){
@@ -502,7 +484,7 @@
    // .media__row
 
    &__row {
-   @include adaptiv-value('gap', 30, 15, 0);
+   @include adaptiv-value('gap', 30, 20, 0);
 
    }
 
@@ -514,21 +496,27 @@
 }
 
 .footer {
-   background-image: url('./../images/footer.jpg');
-   @include adaptiv-value('padding-top', 80, 40, 0);
-   @include adaptiv-value('padding-bottom', 80, 40, 0);
+   background-image: url('./../images/intro-bg.jpg');
+   @include adaptiv-value('padding-top', 130, 50, 0);
+   @include adaptiv-value('padding-bottom', 130, 50, 0);
+   background-repeat: no-repeat;
+   background-size: cover;
 
-   // .footer__row
+   @include breakpoint(1024px){
+background:#FFA5D7;
 
-   &__row {
-      @include breakpoint(1024px) {
-         grid-template-columns: 1fr;
-      }
    }
+
 
    // .footer__column
 
    &__column {
+      max-width: 550px;
+
+      @include breakpoint(1024px){
+         margin: 0 auto;
+      }
+
       h2 {
          font-family: 'Comic Neue';
          font-style: italic;
@@ -536,7 +524,6 @@
          @include adaptiv-value('font-size', 72, 36, 0);
          line-height: 100%;
          text-transform: uppercase;
-         color: #fff;
          @include adaptiv-value('margin-bottom', 75, 35, 0);
 
          @include breakpoint(1024px) {
