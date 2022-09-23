@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "brainscloud",
     "author": "brainscloud",
+    "scripts": {
+        "start": "node server.js"
+      },
     "devDependencies": {
         "@babel/core": "^7.16.0",
         "@babel/preset-env": "^7.16.4",
@@ -27,6 +30,10 @@
         "webpack-stream": "^7.0.0",
         "sass": "^1.43.4"
     },
+    "dependencies": {
+        "express": "^4.17.1",
+        "stripe": "^9.0.0"
+      },
     "browserslist": [
         "last 1 version",
         "> 1%",

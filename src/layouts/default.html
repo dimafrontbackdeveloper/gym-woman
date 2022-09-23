@@ -8,22 +8,21 @@
 
 <body>
     <div class="wrapper">
-        {{> header }}
         <main class="content">{{> body }}</main>
-        {{> footer }}
     </div>
 
     <!-- smooth show blocks  -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            disable: 'phone', // accepts following values: 'phone', 'tablet',
+            disable: 'phone',
             once: true,
         });
     </script>
-
+    <!-- payment -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> <!-- slider -->
-
     <script src="assets/js/app.js"></script>
 </body>
 

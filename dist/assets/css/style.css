@@ -623,6 +623,7 @@ body {
     width: 50vw;
     height: 100%;
     background: #C456A2;
+    border-radius: 0px 50px 50px 0px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -661,51 +662,31 @@ body {
     }
 }
 
-.how__content ul li {
-    font-size: calc(18px + 6 * ((100vw - 320px) / 1600));
-    margin-bottom: calc(15px + 10 * ((100vw - 320px) / 1600));
+.how__content p {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+    margin-bottom: calc(30px + 30 * ((100vw - 320px) / 1600));
+    max-width: 540px;
+}
+
+.how__content p:last-of-type {
+    margin-bottom: calc(20px + 20 * ((100vw - 320px) / 1600));
 }
 
 @media screen and (max-width: 768px) {
-    .how__content ul li {
-        -ms-flex-align: start;
-        align-items: start;
+    .how__content .button {
+        display: block;
+        margin: 0 auto;
     }
 }
 
-.how__content ul li:last-child {
-    margin-bottom: 0px;
-}
-
-.how__content ul li::before {
-    content: "";
-    display: block;
-    margin-right: calc(15px + 35 * ((100vw - 320px) / 1600));
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    -ms-flex-preferred-size: calc(20px + 25 * ((100vw - 320px) / 1600));
-    flex-basis: calc(20px + 25 * ((100vw - 320px) / 1600));
-    width: calc(20px + 25 * ((100vw - 320px) / 1600));
-    height: calc(20px + 25 * ((100vw - 320px) / 1600));
-    background-image: url("./../images/check-mark.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.how__content ul li span {
-    display: inline-block;
-}
-
-.how__content .man {
+.how__content .girl {
     position: absolute;
-    top: -200px;
+    top: -255px;
     right: 70px;
 }
 
 @media screen and (max-width: 1440px) {
-    .how__content .man {
+    .how__content .girl {
         display: none;
     }
 }
@@ -813,55 +794,80 @@ body {
     color: #fff;
 }
 
-.success__column {
-    margin-top: -110px;
+.success__row {
+    gap: 30px;
 }
 
-.success__column:nth-child(even) {
-    margin-left: -50px;
+.success__column:nth-child(1) img {
+    -webkit-transform: rotate(-13deg);
+    transform: rotate(-13deg);
 }
 
-.success__column:nth-child(1), .success__column:nth-child(2) {
-    margin-top: 0px;
+.success__column:nth-child(2) img {
+    -webkit-transform: rotate(9deg);
+    transform: rotate(9deg);
+}
+
+.success__column:nth-child(3) img {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+.success__column:nth-child(4) img {
+    -webkit-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+}
+
+.success__column:nth-child(5) img {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.success__column:nth-child(6) img {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+.success__column:nth-child(7) img {
+    -webkit-transform: rotate(-13deg);
+    transform: rotate(-13deg);
+}
+
+.success__column:nth-child(8) img {
+    -webkit-transform: rotate(9deg);
+    transform: rotate(9deg);
+}
+
+.success__column:nth-child(9) img {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+.success__column:nth-child(10) img {
+    -webkit-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+}
+
+.success__column:nth-child(11) img {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.success__column:nth-child(12) img {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
 }
 
 @media screen and (max-width: 1024px) {
-    .success__column {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: center;
-        justify-content: center;
-        margin-top: 0px;
+    .success__column img {
+        -webkit-transform: rotate(0deg) !important;
+        transform: rotate(0deg) !important;
     }
+}
 
-    .success__column:nth-child(even) {
-        margin-left: 0px;
-    }
-
-    .success__column:nth-child(1) {
-        -webkit-transform: rotate(13deg);
-        transform: rotate(13deg);
-    }
-
-    .success__column:nth-child(2) {
-        -webkit-transform: rotate(-9deg);
-        transform: rotate(-9deg);
-    }
-
-    .success__column:nth-child(3) {
-        -webkit-transform: rotate(-15deg);
-        transform: rotate(-15deg);
-    }
-
-    .success__column:nth-child(4) {
-        -webkit-transform: rotate(6deg);
-        transform: rotate(6deg);
-    }
-
-    .success__column:nth-child(5) {
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-    }
+.success__column img {
+    border: 10px solid #81FEFA;
+    border-radius: 5px;
 }
 
 .media {
@@ -874,7 +880,7 @@ body {
 }
 
 .media__row {
-    gap: calc(15px + 15 * ((100vw - 320px) / 1600));
+    gap: calc(20px + 10 * ((100vw - 320px) / 1600));
 }
 
 .media__column {
@@ -883,13 +889,25 @@ body {
 
 .footer {
     background-image: url("./../images/intro-bg.jpg");
-    padding-top: calc(40px + 40 * ((100vw - 320px) / 1600));
-    padding-bottom: calc(40px + 40 * ((100vw - 320px) / 1600));
+    padding-top: calc(50px + 80 * ((100vw - 320px) / 1600));
+    padding-bottom: calc(50px + 80 * ((100vw - 320px) / 1600));
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media screen and (max-width: 1024px) {
-    .footer__row {
-        grid-template-columns: 1fr;
+    .footer {
+        background: #FFA5D7;
+    }
+}
+
+.footer__column {
+    max-width: 550px;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer__column {
+        margin: 0 auto;
     }
 }
 
@@ -900,7 +918,6 @@ body {
     font-size: calc(36px + 36 * ((100vw - 320px) / 1600));
     line-height: 100%;
     text-transform: uppercase;
-    color: #fff;
     margin-bottom: calc(35px + 40 * ((100vw - 320px) / 1600));
 }
 
@@ -925,4 +942,22 @@ body {
         -ms-flex-align: center;
         align-items: center;
     }
+}
+
+.thank {
+    width: 100vw;
+    height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.thank h2 {
+    padding: 20px 30px;
+    border-radius: 20px;
+    max-width: 800px;
+    background: #fff;
 }

@@ -119,7 +119,7 @@
 
       @include breakpoint(768px) {
          display: grid;
-         grid-template-columns: repeat(2,1fr);
+         grid-template-columns: repeat(2, 1fr);
          gap: 30px;
       }
 
@@ -162,8 +162,8 @@
          }
 
          @include breakpoint(425px) {
-           margin: 0 auto;
-           margin-bottom: 10px;
+            margin: 0 auto;
+            margin-bottom: 10px;
          }
 
       }
@@ -234,7 +234,7 @@
    @include adaptiv-value('padding-bottom', 60, 30, 0);
    position: relative;
 
-   @include breakpoint(1440px){
+   @include breakpoint(1440px) {
       background: $primary;
    }
 
@@ -247,7 +247,7 @@
       background: $primary;
       border-radius: 0px 50px 50px 0px;
 
-      @include breakpoint(1440px){
+      @include breakpoint(1440px) {
          display: none;
       }
    }
@@ -264,45 +264,52 @@
 
    &__content {
       position: relative;
-   @include adaptiv-value('padding-top', 70, 35, 0);
-   @include adaptiv-value('padding-right', 150, 40, 0);
-   @include adaptiv-value('padding-bottom', 95, 45, 0);
-   @include adaptiv-value('padding-left', 150,40, 0);
+      @include adaptiv-value('padding-top', 70, 35, 0);
+      @include adaptiv-value('padding-right', 150, 40, 0);
+      @include adaptiv-value('padding-bottom', 95, 45, 0);
+      @include adaptiv-value('padding-left', 150, 40, 0);
       background: #FFFFFF;
       opacity: 0.95;
       border-radius: 50px;
 
       h2 {
          text-align: start;
-         @include adaptiv-value('margin-bottom', 60,30, 0);
+         @include adaptiv-value('margin-bottom', 60, 30, 0);
 
-         @include breakpoint(1440px){
+         @include breakpoint(1440px) {
             text-align: center;
             margin: 0 auto;
-            @include adaptiv-value('margin-bottom', 60,30, 0);
+            @include adaptiv-value('margin-bottom', 60, 30, 0);
          }
       }
 
-   
-         p {
-            @include adaptiv-value('font-size', 18,16, 0);
-            @include adaptiv-value('margin-bottom', 60,30, 0);
-            max-width: 540px;
+
+      p {
+         @include adaptiv-value('font-size', 18, 16, 0);
+         @include adaptiv-value('margin-bottom', 60, 30, 0);
+         max-width: 540px;
 
 
-            &:last-of-type {
-               margin-bottom: 0px;
-            }
-
+         &:last-of-type {
+            @include adaptiv-value('margin-bottom', 40, 20, 0);
          }
-      
+
+      }
+
+      .button{
+         @include breakpoint(768px) {
+            display: block;
+            margin: 0 auto;
+         }
+      }
+
 
       .girl {
          position: absolute;
          top: -255px;
          right: 70px;
 
-         @include breakpoint(1440px){
+         @include breakpoint(1440px) {
             display: none;
          }
       }
@@ -313,7 +320,7 @@
 
    h2 {
       margin: 0 auto;
-   @include adaptiv-value('margin-bottom', 70, 30, 0);
+      @include adaptiv-value('margin-bottom', 70, 30, 0);
    }
 
    .swiper-container {
@@ -339,27 +346,27 @@
    // .amazon__row
 
    &__row {
-   @include adaptiv-value('margin-bottom', 75, 30, 0);
+      @include adaptiv-value('margin-bottom', 75, 30, 0);
       grid-template-columns: repeat(2, 1fr);
-   @include adaptiv-value('gap', 30, 15, 0);
+      @include adaptiv-value('gap', 30, 15, 0);
 
-   @include breakpoint(768px){
-      grid-template-columns: 1fr;
-   }
+      @include breakpoint(768px) {
+         grid-template-columns: 1fr;
+      }
    }
 
    // .amazon__column
 
    &__column {
       background: #fff;
-   @include adaptiv-value('padding-top', 30, 15, 0);
-   @include adaptiv-value('padding-right', 30, 15, 0);
-   @include adaptiv-value('padding-bottom', 30, 15, 0);
-   @include adaptiv-value('padding-left', 30, 15, 0);
-   @include adaptiv-value('border-radius', 50, 25, 0);
+      @include adaptiv-value('padding-top', 30, 15, 0);
+      @include adaptiv-value('padding-right', 30, 15, 0);
+      @include adaptiv-value('padding-bottom', 30, 15, 0);
+      @include adaptiv-value('padding-left', 30, 15, 0);
+      @include adaptiv-value('border-radius', 50, 25, 0);
 
       &>p {
-   @include adaptiv-value('font-size', 16, 14, 0);
+         @include adaptiv-value('font-size', 16, 14, 0);
          line-height: 130%;
          color: #A0A0A0;
       }
@@ -368,20 +375,20 @@
    // .amazon__column-top
 
    &__column-top {
-   @include adaptiv-value('margin-bottom', 17, 10, 0);
+      @include adaptiv-value('margin-bottom', 17, 10, 0);
 
-   @include breakpoint(768px){
-     justify-content: center;
-   }
+      @include breakpoint(768px) {
+         justify-content: center;
+      }
    }
 
    // .amazon__column-top-left
 
    &__column-top-left {
-   @include adaptiv-value('margin-right', 20, 10, 0);
-   flex-grow: 0;
-   flex-shrink: 0;
-   @include adaptiv-value('flex-basis', 95,60, 0);
+      @include adaptiv-value('margin-right', 20, 10, 0);
+      flex-grow: 0;
+      flex-shrink: 0;
+      @include adaptiv-value('flex-basis', 95, 60, 0);
    }
 
    // .amazon__column-top-right
@@ -399,11 +406,11 @@
       }
 
       h3 {
-   @include adaptiv-value('font-size', 24, 20, 0);
+         @include adaptiv-value('font-size', 24, 20, 0);
       }
 
       h4 {
-   @include adaptiv-value('font-size', 18, 16, 0);
+         @include adaptiv-value('font-size', 18, 16, 0);
          color: #A0A0A0;
       }
    }
@@ -424,52 +431,97 @@
    // .success__row
 
    &__row {
-
+      gap: 30px;
    }
 
    // .success__column
 
    &__column {
-      margin-top: -110px;
-
-      &:nth-child(even) {
-         margin-left: -50px;
+      &:nth-child(1) {
+         img {
+            transform: rotate(-13deg);
+         }
       }
 
-      &:nth-child(1),
       &:nth-child(2) {
-         margin-top: 0px;
+         img {
+            transform: rotate(9deg);
+         }
       }
 
-      @include breakpoint(1024px){
-         display: flex;
-         justify-content: center;
-      margin-top: 0px;
-
-         &:nth-child(even) {
-            margin-left: 0px;
+      &:nth-child(3) {
+         img {
+            transform: rotate(15deg);
          }
+      }
 
-         &:nth-child(1){
-            transform: rotate(13deg);
+      &:nth-child(4) {
+         img {
+            transform: rotate(-6deg);
          }
+      }
 
-         &:nth-child(2){
-            transform: rotate(-9deg);
+      &:nth-child(5) {
+         img {
+            transform: rotate(-10deg);
          }
+      }
 
-         &:nth-child(3){
-            transform: rotate(-15deg);
-         }
-
-         &:nth-child(4){
-            transform: rotate(6deg);
-         }
-
-         &:nth-child(5){
+      &:nth-child(6) {
+         img {
             transform: rotate(10deg);
          }
       }
+
+      &:nth-child(7) {
+         img {
+            transform: rotate(-13deg);
+
+         }
+      }
+
+      &:nth-child(8) {
+         img {
+            transform: rotate(9deg);
+         }
+      }
+
+      &:nth-child(9) {
+         img {
+            transform: rotate(15deg);
+         }
+      }
+
+      &:nth-child(10) {
+         img {
+            transform: rotate(-6deg);
+         }
+      }
+
+      &:nth-child(11) {
+         img {
+            transform: rotate(-10deg);
+         }
+      }
+
+      &:nth-child(12) {
+         img {
+            transform: rotate(10deg);
+         }
+      }
+
+      @include breakpoint(1024px) {
+         img {
+            transform: rotate(0deg) !important;
+         }
+      }
+
+
+      img {
+         border: 10px solid #81FEFA;
+         border-radius: 5px;
+      }
+
    }
 }
 
@@ -478,13 +530,13 @@
 
    h2 {
       margin: 0 auto;
-   @include adaptiv-value('margin-bottom', 85, 40, 0);
+      @include adaptiv-value('margin-bottom', 85, 40, 0);
    }
 
    // .media__row
 
    &__row {
-   @include adaptiv-value('gap', 30, 20, 0);
+      @include adaptiv-value('gap', 30, 20, 0);
 
    }
 
@@ -502,8 +554,8 @@
    background-repeat: no-repeat;
    background-size: cover;
 
-   @include breakpoint(1024px){
-background:#FFA5D7;
+   @include breakpoint(1024px) {
+      background: #FFA5D7;
 
    }
 
@@ -513,7 +565,7 @@ background:#FFA5D7;
    &__column {
       max-width: 550px;
 
-      @include breakpoint(1024px){
+      @include breakpoint(1024px) {
          margin: 0 auto;
       }
 
@@ -545,10 +597,17 @@ background:#FFA5D7;
    }
 }
 
-.container {}
+.thank{
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 
-.d-g {}
-
-.gtc-2 {}
-
-.button {}
+   h2{
+      padding: 20px 30px;
+      border-radius: 20px;
+      max-width: 800px;
+      background: #fff;
+   }
+}
