@@ -1,3 +1,3 @@
 npm i;
 start front side:  => gulp;
-start back side:  => npm  run start;
+start server side:  => npm  run start;
